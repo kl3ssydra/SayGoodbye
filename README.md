@@ -8,7 +8,7 @@
 
 <br>
   
-```batch
+```bash
 Usage :
 
     ➥      $ python3 main.py <url>
