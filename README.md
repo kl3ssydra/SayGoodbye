@@ -14,9 +14,9 @@ Usage: python main.py <url>
 ```batch
 Example: $ python main.py https://example.com
 
-         $ main.py -site http://example.com/test/ 2>/dev/null
+         $ main.py -site http://example.com 2>/dev/null
 
-         $ HULKMAXPROCS=4096 main.py -site http://example.com 2>/tmp/errlog
+         $ SGBMAXPROCS=4096 main.py -site http://example.com 2>/tmp/errlog
 ```
 
 <br>
