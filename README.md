@@ -10,6 +10,7 @@
   
 ```batch
 Usage :
+
     ➥      $ python3 main.py <url>
 ```
 ```batch
