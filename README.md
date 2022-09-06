@@ -13,7 +13,7 @@ Usage :
 
     ➥      $ python3 main.py <url>
 ```
-```batch
+```bash
 Examples : 
 
     ➥      $ python main.py https://example.com
