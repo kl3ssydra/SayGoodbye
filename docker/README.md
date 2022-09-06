@@ -1,6 +1,6 @@
 <br>
 
-<h1 align="center">😀 DOS TOOL 😀</h1>
+<h1 align="center">💭 SayGoodbye - go version 💭</h1>
 
 <br>
   
