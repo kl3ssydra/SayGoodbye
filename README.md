@@ -6,7 +6,7 @@
 
 <p align="center">ported to Go language from Python.</p>
 
-<p align="center">The main difference from Python version layed in Golang architecture for concurrency: the goroutines. hulk.py runs
+<p align="center">The main difference from Python version layed in Golang architecture for concurrency: the goroutines. main.py runs
 a new thread for each connection in the connection pool so it uses hundreds and thousands of threads. 
 hulk.go just uses lightweight goroutines that used only tens of threads (commonly golang runtime started one thread for
 CPU core + several service threads). This architecture allows golang version better consume resources and got much higher 
