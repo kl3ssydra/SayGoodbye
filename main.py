@@ -69,7 +69,7 @@ def usage():
 you can add "safe" after url, to autoshut after dos
             
             
-            ''', Colors.red, interval=0)
+            ''', Colors.red_to_yellow, interval=0)
 
 def httpcall(url):
     useragent_list()
@@ -132,7 +132,7 @@ class MonitorThread(threading.Thread):
               -- Attack Finished --           
             
           
-            ''', Colors.red, interval=0)
+            ''', Colors.red_to_yellow, interval=0)
 
 if len(sys.argv) < 2:
     usage()
@@ -154,7 +154,7 @@ else:
               -- Attack Started --           
             
           
-        ''', Colors.red, interval=0)
+        ''', Colors.red_to_yellow, interval=0)
 
         if len(sys.argv)== 3:
             if sys.argv[2]=="safe":
